@@ -1,0 +1,23 @@
+{
+  "name": "spa-universe",
+  "version": "1.0.0",
+  "description": "![preview](/github/preview.png)",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkoch97/spa-universe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tkoch97/spa-universe/issues"
+  },
+  "homepage": "https://github.com/tkoch97/spa-universe#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

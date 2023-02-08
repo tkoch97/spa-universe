@@ -2,11 +2,6 @@ import {menuList} from "./elements.js"
 const elements = {
 }
 
-const hidden = () => {
-  menuList.classList.remove('menu-list-bottomup');
-  menuList.classList.add('menu-list-hidden');
-}
-
 const handleMenuMobile = () => {
   if (menuList.classList.contains('menu-list-hidden')) {
     menuList.classList.remove('menu-list-hidden');
