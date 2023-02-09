@@ -15,13 +15,11 @@ export class Router {
     this.handle()
   }
 
-  handle() {
+  async handle() {
     const {pathname} = window.location
     const route = this.routes[pathname]
-    
-    fetch(route)
-    .then(data => data.text())
-    .then(html => {document.querySelector('#app').innerHTML = html})
+    const html = await fetch(route).then(data => data.text())
+    document.querySelector('#app').innerHTML = html
 
     this.changeImageAndMarkdown()
   }
