@@ -1,15 +1,17 @@
 # Rockettseat - explorer trail, stage 6.
-## SPA Universe 🌌 - UNDER DEVELOPMENT ⏳
+## SPA Universe 🌌
 
 
 ![preview](/github/preview.png)
 
 
-> In this project I creatig a page with SPA (Single-Page Application) technique.
+> In this project I created a page with SPA (Single-Page Application) technique. It contains basic informations and curiosities of the universe.
 
 > This project was done as an exercise proposed by Rocketseat course.
 
-[🔗 Click here to access](https://tkoch97.github.io/spa-universe/)
+> Techniques used: DOM, mobile first, responsiviness, ES6 modules, dependency injection, clean code principes and recursivity.
+
+<!--[🔗 Click here to access](https://tkoch97.github.io/spa-universe/)-->
 
 ## 🔧 Tecnologies
 

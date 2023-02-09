@@ -10,7 +10,7 @@
   /* Font Size */
   font-size: 62.5%;
   --fs-menu: clamp(1.5rem, 1.2rem + 3vw, 2.1rem);
-  --fs-titleHomePage: 4.8rem;
+  --fs-titleHomePage: clamp(3.0rem, 3.0rem + 3vw, 4.8rem);
   --fs-titleUniverseAndExplorer: clamp(2.0rem, 1.5rem + 2vw, 4.8rem);
   --fs-button: 1.4rem;
   --fs-txtPrincipal: clamp(1.2rem, 1.0rem + 2vw, 1.8rem);
@@ -32,7 +32,6 @@ body {
 .header-bar {
   display: flex;
   justify-content: space-between;
-  align-items: top;
   padding: 4.0rem 3.0rem 0rem;
 }
 
@@ -61,8 +60,8 @@ body {
   left: 0;
   width: 100%;
   list-style: none;
-  background: linear-gradient(180deg, rgba(1, 13, 17, 0) 0%, #031B24 42.71%);
-  border-radius: 0rem 0rem 2.0rem 2.0rem;
+  background: linear-gradient(180deg, rgba(48, 48, 48, 0) 0%, rgba(23, 27, 29, 0.53566) 7.51%, #01090D 21.88%);
+  border-radius: 0rem 0rem 6.0rem 6.0rem;
   border-bottom: 0.1rem solid #f8f8f8;
   animation-fill-mode: backwards;
 }
@@ -84,7 +83,7 @@ li a {
   text-align: center;
   text-decoration: none;
   color: var(--fc-menu);
-  padding-bottom: 1.0rem;
+  padding-bottom: 1.5rem;
   font-family: var(--ff-general);
   font-size: var(--fs-menu);
   line-height: 1.5rem;
@@ -97,29 +96,19 @@ li a:hover {
 }
 
 body {
-  background-color: black;
-  height: 100vh;
-}
-
-body::before { /*O before foi criado para criar um elemento atrás dos elementos do body, me permitindo colocar a imagem de fundo com blur*/
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-image: url(./assets/background-home.png);
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center;
-  filter: blur(0.1rem);
-  z-index: -1;
+  background-color: black;
+  height: 100vh;
 }
 
-.title {
+.title-explorer, .title-universe {
   font-size: var(--fs-titleUniverseAndExplorer);
   color: var(--fc-geral);
   font-weight: 700;
+  padding-left: 3.0rem;
 }
 
 .home-page {
@@ -134,6 +123,8 @@ body::before { /*O before foi criado para criar um elemento atrás dos elementos
 }
 
 .home-page .title {
+  color: var(--fc-geral);
+  font-weight: 700;
   font-size: var(--fs-titleHomePage);
   text-align: center;
   letter-spacing: 0.1rem;
@@ -146,22 +137,22 @@ body::before { /*O before foi criado para criar um elemento atrás dos elementos
   align-items: flex-start;
   justify-content: center;
   height: 70vh;
-  padding: 0rem 0.8rem;
 }
-
 
 p {
   color: var(--fc-txtPricipal);
   font-size: var(--fs-txtPrincipal);
   max-width: 64.8rem;
+  padding-left: 3.0rem;
+  padding-right: 3.0rem;
   font-weight: 400;
+  margin-bottom: 5.0rem;
 }
 
 .button-space {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 2.0rem;
 }
 
 .button {
@@ -183,6 +174,64 @@ p {
 .button:hover {
   background: #fff;
   color: var(--fc-butonHover);
+}
+
+/* Media Queries*/
+
+@media(min-width: 760px) {
+
+  .header-bar {
+    display: flex;
+    justify-content: flex-start;
+    padding: 4.0rem 7.2rem 0rem;
+    gap: 3.2rem;
+  }
+  
+  .menuMobile {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-list-hidden {
+    display: flex;
+    flex-direction: row;
+    position: inherit;
+    background: none;
+    border: none;
+    gap: 3.2rem;
+  }
+
+  .universe-page, .explorer-page {
+    height: 80vh;
+  }
+
+  li a {
+    padding-bottom: 0;
+  }
+
+  .title-explorer, .title-universe, p {
+    padding-left: 10.2rem;
+  }
+
+  p {
+    margin-bottom: 10.0rem;
+  }
+}
+
+@media(min-width: 1024px) {
+
+  .universe-page, .explorer-page {
+    height: 85vh;
+  }
+
+  p {
+    padding-right: 0;
+    max-width: 70.0rem;
+  }
 }
 
 /* Animations */
