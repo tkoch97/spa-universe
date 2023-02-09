@@ -21,10 +21,23 @@ export class Router {
     
     fetch(route)
     .then(data => data.text())
-    .then(html => {
-      document.querySelector('#app').innerHTML = html
-    })
+    .then(html => {document.querySelector('#app').innerHTML = html})
 
+    this.changeImageAndMarkdown()
+  }
+
+  changeImageAndMarkdown() {
+    const {pathname} = window.location
+    if (pathname == '/the-universe') {
+      document.body.style.backgroundImage = 'url(./assets/background-o-universo.png)'
+      document.querySelector("#link-universe").style.color = '#fff'
+    } else if(pathname == '/explorer') {
+      document.body.style.backgroundImage = 'url(./assets/background-exploração.png)'
+      document.querySelector("#link-explorer").style.color = '#fff'
+    } else if(pathname == '/') {
+      document.body.style.backgroundImage = 'url(./assets/background-home.png)'
+      document.querySelector("#link-home").style.color = '#fff'
+    }
   }
   
 }
